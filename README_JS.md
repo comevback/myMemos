@@ -1,22 +1,5 @@
 # JS Memos
 
-## concurrency
-
-```go
-func main() {
-	go greet("Nice to meet you!")
-	go greet("How are you?")
-	go slowGreet("How ... are ... you ...?")
-	go greet("I hope you're liking the course!")
-}
-```
-
-在运行这些函数作为 goroutines 时,我们在控制台上看不到任何输出。这是因为 goroutine 的设计目的是以非阻塞的方式运行函数,以便后续的操作和函数调用可以立即执行。当我们在 main 函数中启动这四个 goroutines 时,main 函数会立即结束并退出程序,导致我们看不到控制台输出。这是因为 goroutines 的特性是不会返回值,而调用它们的地方也不会等待它们完成。
-
-- goroutine 旨在以非阻塞的方式运行函数
-- 主函数会立即退出,而不会等待 goroutines 执行完毕
-- goroutines 不会返回值,因此调用它们的地方也不会等待它们完成
-
 ## 闭包
 
 > 理解闭包关键是理解作用域链
