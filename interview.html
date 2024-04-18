@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x81ea;&#x5df1; PR</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="自己-pr">自己 PR</h1>
+<p>研究室の Python を基に開発された分散計算システム（UPC）をより適した技術で全面的にリデザイン直し、フルスタック Web アプリを開発しました。改善点は以下の通りです：</p>
+<ol>
+<li>バックエンドサーバーに Buildpack を統合して自動で Docker イメージを生成し、サーバーとクライアントの接続方式を TCP ソケットから RESTful API と WebSocket プロトコルに置き換え、システムの拡張性と安定性を向上させました。</li>
+<li>React を用いたフロントエンド UI を設計開発し、CSS のデザインによってシステムの外観を向上させ、使いやすさを改善しました。</li>
+<li>Register サーバーを設計開発し、システムの前後端のホストを管理します、ホストのインフォメーションを MongoDB に保存します。</li>
+<li>AWS と Frp を利用してシステムの内部ネットワークトンネリングを実現し、Nginx を使用してクラウド上の Register サーバーの Reverse Proxy を実施し、外部ネットワークからシステムにアクセスできるようにしました。</li>
+<li>Docker を使用してシステム全体をコンテナ化し、Github Actions で CI/CD を行い、ユーザーがシステムをワンクリックで deploy できるように Shell Script を作成しました。</li>
+</ol>
+<p>このプロジェクトは独自に開発しましたが、経験が浅いためどうすればいいのか確定できなかったです。しかし、Udemy、ChatGPT、StackOverflow で学びながら開発方向を定め、フレームワークを構築しました。開発中には何度も徹夜で React コンポーネントやサーバールートを書いたり、空港で待機中もパソコンで作業を行い、約 1.5 か月で目標を達成しました。Web アプリ開発に熱意を持っており、疲れを感じることはありませんでした。さらに、研究室のクラスメイトのためにドキュメントを作成し、システムの理解を容易にしました。</p>
+<p>Web 業界では技術が急速に変化しているため、Web エンジニアは常に新しい知識を学び続ける必要があります。私は学び続ける意欲があり、毎日コーディングの学習を行っています。新技術を重視し、自社サービスを開発する企業で実際のコーディング作業に携わりたいと考えています、綺麗な Web サイトを作りしたいです。</p>
+<h1 id="面接準備する内容">面接準備する内容</h1>
+<ol>
+<li>自己ＰＲ
+私の強み
+研究室の Python を基に開発された分散計算システム（UPC）をより適した技術で全面的にデザイン直し、フルスタック Web アプリを開発しました。</li>
+</ol>
+<hr>
+<ol start="2">
+<li>志望動機
+Web アプリ開発に熱意があります。</li>
+</ol>
+<hr>
+<ol start="3">
+<li>なこの業界か
+まずは Web 開発にすごい興味があります、自分でゼロから Web サイトを作りが好きです。次は、他の IT 業界より、Web 業界はプログラミング実践の機会が多い、新しい技術に触れるチャンスも多いですから、私は、</li>
+</ol>
+<hr>
+<ol start="4">
+<li>なぜ日本の会社か
+日本の会社は、働き</li>
+</ol>
+<hr>
+<ol start="5">
+<li>なぜこの会社か
+。。。</li>
+</ol>
+<hr>
+<ol start="6">
+<li>なぜ ○○ 職がいいのか
+学校に研究した時、いろいろなことに触れました、研究より、開発</li>
+</ol>
+<hr>
+<ol start="7">
+<li>具体的にしてみたい仕事
+プログラミング、バックエンドあるいはフロントエンド開発，</li>
+</ol>
+<hr>
+<ol start="8">
+<li>大学時代の専攻を仕事にどういかせるか
+大学時代の研究の中に Web アプリ開発の経験がありました、自己学習にも慣れました。この習慣は仕事に役たつと思います。</li>
+</ol>
+<hr>
+<ol start="9">
+<li>長所と短所について　短所の改善策</li>
+</ol>
+<hr>
+<ol start="10">
+<li>キャリアビジョン
+将来はフルスタックエンジニアになり、Web 開発についての技能を熟達したいです。</li>
+</ol>
+<hr>
+<ol start="11">
+<li>学生時代の取り組み</li>
+</ol>
+<hr>
+<ol start="12">
+<li>趣味特技
+  撮影、バスケ</li>
+</ol>
+<hr>
+<h3 id="その他">その他</h3>
+<p>気になるニュース
+好きな物どこがすきなのかその良さを伝えてください
+社会人としてなりたい姿。またそのために努力しようとしていること</p>
+<p>仕事以外で今後チャレンジしてみたいこととその理由について
+上司・同僚とコミュニケーションを取る上で大切だと思うことは何か・その理由</p>
+<hr>
+<h2 id="逆質問">逆質問</h2>
+<p>実際の仕事にどの言語を使ってますか、どの技術を取り込みますか。</p>
+
+            
+            
+        </body>
+        </html>
